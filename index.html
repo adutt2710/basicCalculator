@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <script>
+        function calc(){
+            var num1 = prompt("Enter First number:");
+            var operator = prompt("Add (+) Multiply (*) subtract(-) or Divide(/)?");
+            var num2 = prompt("Enter Second Number");
+            if(operator == "+"){
+                var sum = Number(num1) + Number(num2);
+            }else if(operator == "-"){
+                var sum = Number(num1) - Number(num2);
+            }else if(operator == "*"){
+                var sum = Number(num1) * Number(num2);
+            }else if(operator == "/"){
+               var sum = Number(num1) / Number(num2);
+            }else{
+                var sum = "Not a valid Operator";
+            }
+            alert(sum);
+            
+            while(sum == "Not a valid Operator"){
+                calc();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <button name="Start" onclick="calc()">Start</button>
+</body>
+</html>
